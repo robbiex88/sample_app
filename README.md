@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hello! 
 
-Things you may want to cover:
+I am re-focusing my learning efforts on building web applications with Ruby on Rails! In particular, this is an application being developed following Hartl's Ruby on Rails Tutorial, which can be found here:
+
+https://www.railstutorial.org/
+
+Below are notes on this project:
 
 * Ruby version
 
-* System dependencies
+```ruby 2.2.2p95 (2015-04-13 revision 50295) [i686-linux]```
 
-* Configuration
+* Rails version 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```Rails 5.0.1```
