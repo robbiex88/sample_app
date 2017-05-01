@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SampleApp</title>
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,3 +12,4 @@
     <%= yield %>
   </body>
 </html>
+<!-- so this file holds they layout that every page in the application will use. In order to DRY up code, we can use this to set up the layout for every page in the application. This is just me thinking here, but we may be able to use it for top and bottom portions / navigation bar / etc -->
