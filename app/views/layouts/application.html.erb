@@ -6,10 +6,27 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
   </head>
-
   <body>
-    <%= yield %>
+  	<header class="navbar navbar-fixed-top navbar-inverse">
+  	  <div class="container">
+  	  	<%= link_to "sample app", '#', id: "logo" %>
+  	  	<nav>
+  	  	  <ul class="nav navbar-nav navbar-right">
+  	  	  	<li><%= link_to "Home",	'static_pages_home_path' %></li>
+  	  	  	<li><%= link_to "Help", 'static_pages_help_path' %></li>
+  	  	  	<li><%= link_to "Log In", 'static_pages_login_path' %></li>
+  	  	  </ul>
+  	  	</nav>
+  	  </div>
+  	</header>
+  	<div class="container">
+  	  <%= yield %>
+  	</div>
   </body>
 </html>
 <!-- so this file holds they layout that every page in the application will use. In order to DRY up code, we can use this to set up the layout for every page in the application. This is just me thinking here, but we may be able to use it for top and bottom portions / navigation bar / etc -->

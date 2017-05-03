@@ -1,8 +1,15 @@
 <%# provide(:title, "Home") %> <!-- home here is redundant, removing -->
 <!-- So, provide and yield are a little weird looking... Essentially, provide sets the title equal to "Home" here and yield prints it out. Check out http://stackoverflow.com/questions/17457985/yield-and-provide-inside-template -->
+<div class="center jumbotron"
+	<h1>Hello!</h1>
+	<p>
+		I will be using this web page as I learn how to create webapps with Rails. This may actually be a good place to list my resume / contact info as well...
+	</p>
 
-<h1>Hello!</h1>
-<p>
-	I will be using this web page as I learn how to create webapps with Rails. This may actually be a good place to list my resume / contact info as well...
-</p>
+	<h2>This is the home page for the <a href="https://www.railstutorial.org">Ruby on Rails Tutorial</a> sample application.</h2>
+	<%= link_to "Sign Up Now!", '#', class: "btn btn-lg btn-primary" %>
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails Logo"), 'http://rubyonrails.org' %>
+<%= image_tag("cat.png", alt: "Random cat pic") %>
 <!--StaticPages#home -->
