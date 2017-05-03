@@ -1,31 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-      </script>
-    <![endif]-->
-  </head>
   <body>
-  	<header class="navbar navbar-fixed-top navbar-inverse">
-  	  <div class="container">
-  	  	<%= link_to "sample app", '#', id: "logo" %>
-  	  	<nav>
-  	  	  <ul class="nav navbar-nav navbar-right">
-  	  	  	<li><%= link_to "Home",	'static_pages_home_path' %></li>
-  	  	  	<li><%= link_to "Help", 'static_pages_help_path' %></li>
-  	  	  	<li><%= link_to "Log In", 'static_pages_login_path' %></li>
-  	  	  </ul>
-  	  	</nav>
-  	  </div>
-  	</header>
+  	<%= render 'layouts/rails_default' %>
+  	<%= render 'layouts/header' %> <!-- this partial is for the navbar -->
   	<div class="container">
   	  <%= yield %>
+	  <%= link_to image_tag("rails.png", alt: "Rails Logo"), 'http://rubyonrails.org' %>
+  	  <%= render 'layouts/footer' %>
   	</div>
   </body>
 </html>
