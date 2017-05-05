@@ -5,8 +5,8 @@ module ApplicationHelper
 	def full_title(page_title = '')
 		base_title = "Ruby on Rails Tutorial Sample App"
 		
-		if page_title.empty? 				# page title is overwritten if passed in, otherwise blank
-			base_title								# this is an 'Implicit Return'
+		if page_title.empty? 	# page title is overwritten if passed in, otherwise blank
+			base_title			# this is an 'Implicit Return'
 		else
 			page_title + " | " + base_title
 		end
