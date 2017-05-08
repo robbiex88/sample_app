@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# Generated when we created the model
+# so, adding fields to the model will require us to add test data here
+# Contains sample data for the test database
+
+
+
+# Commenting out - not needed until ch8:
+# https://www.railstutorial.org/book/modeling_users
+# one:
+#   name: MyString
+#   email: MyString
+
+# two:
+#   name: MyString
+#   email: MyString
