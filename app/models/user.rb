@@ -21,5 +21,10 @@ class User < ApplicationRecord
 		self.email = email.downcase
 	end
 
+	has_secure_password
+	validates :password, presence: true, length: {minimum: 5, maximum: 10} # can also do this -> length: {in: 5..10}
 
+
+
+	# The method for authenticating users will be to take a submitted password, hash it, and compare the result to the hashed value stored in the database. If the two match, then the submitted password is correct and the user is authenticated. By comparing hashed values instead of raw passwords, we will be able to authenticate users without storing the passwords themselves. This means that, even if our database is compromised, our users’ passwords will still be secure.
 end

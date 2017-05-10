@@ -16,7 +16,7 @@ gem 'turbolinks',   '5.0.1' # this is freaking neat         - https://github.com
 # Turbolinks makes navigating your web application faster. Get the performance benefits of a single-page application without the added complexity of a client-side JavaScript framework. Use HTML to render your views on the server side and link to pages as usual. When you follow a link, Turbolinks automatically fetches the page, swaps in its <body>, and merges its <head>, all without incurring the cost of a full page load.
 
 gem 'jbuilder',     '2.4.1' # DSL for making JSON structures  - https://github.com/rails/jbuilder
-
+gem 'bcrypt'
 group :development, :test do
   gem 'sqlite3', '1.3.12' # mysql replacement
   gem 'byebug',  '9.0.0', platform: :mri # debugger for ruby 2  - https://github.com/deivid-rodriguez/byebug

@@ -7,7 +7,7 @@ class UserTest < ActiveSupport::TestCase
   # end
 
   def setup
-  	@user = User.new(name: "test user", email: "test123@aol.com")
+  	@user = User.new(name: "test user", email: "test123@aol.com", password: "testing999", password_confirmation: "testing999")
   end
 
   test "should be valid" do
@@ -81,4 +81,29 @@ class UserTest < ActiveSupport::TestCase
     @user.save
     assert_equal mixed_case_email.downcase, @user.reload.email
   end
+
+  # # # # # # # # # # # #
+  # paswd field testing #
+  # # # # # # # # # # # #
+
+  test "password should not be blank" do
+    @user.password = @user.password_confirmation = " " * 6
+    assert_not @user.valid?
+  end
+
+  test "password should have a minimum length" do 
+    # Let's make the minimum 6 chatacters
+    @user.password = @user.password_confirmation = "a" * 4
+    assert_not @user.valid?
+  end
+
+  test "password should have a maximum length" do
+    # and make the maximum 10 characters
+    @user.password = @user.password_confirmation = "a" * 11
+    assert_not @user.valid?
+  end
+  # test "password and confirmation should be equal"
+  #   assert_equal @user.password, @user.password_confirmation
+  # end
+
 end
