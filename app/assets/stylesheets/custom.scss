@@ -100,3 +100,22 @@ footer {
 .mog {
 	float: right;
 }
+
+/* The below is for the params debug box */
+@mixin box_sizing {
+	.moz-box-sizing:	border-box;
+	.webkit-box-sizing:	border-box;
+	box-sizing:			border-box;
+}
+
+.debug_dump {
+	clear:		both;
+	float:		left;
+	width:		100%;
+	margin-top:	45px;
+	@include 	box_sizing; /* demonstrates SASS mixin facility, allowing a group of CSS rules to be packaged up and used for multiple elements */
+}
+
+.user_data {
+	float: right;
+}

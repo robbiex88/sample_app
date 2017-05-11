@@ -1,0 +1,36 @@
+<% provide(:title, "#{@user.name} - Profile") %>
+<!-- So, provide and yield are a little weird looking... Essentially, provide sets the title equal to "Home" here and yield prints it out. Check out http://stackoverflow.com/questions/17457985/yield-and-provide-inside-template -->
+<p>Displaying user information for User ID: <%=@user.id %></p>
+<div class="row">
+	<aside class="col-md-4">
+		<section class="user_info">
+			<h1><%= gravatar_for(@user, 100)%> <%= @user.name %></h1>
+		</section>
+	</aside>
+</div>
+<!-- 	<table>
+		<tr>
+			<td>Name:</td>
+			<td class="user_data"><%#= @user.name %></td>
+		</tr>
+
+		<tr>
+			<td>Email:</td>
+			<td class="user_data"><%#= @user.email %></td>
+		</tr>
+
+		<tr>
+			<td>Password Digest:</td>
+			<td class="user_data">filtered</td>
+		</tr>
+
+		<tr>
+			<td>Created:</td>
+			<td class="user_data"><%#= @user.created_at %></td>
+		</tr>
+		<tr>
+			<td>Updated:</td>
+			<td class="user_data"><%#= @user.updated_at %></td>
+		</tr>
+	</table>
+ -->

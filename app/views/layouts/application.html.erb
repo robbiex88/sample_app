@@ -5,9 +5,12 @@
   	<%= render 'layouts/header' %> <!-- this partial is for the navbar -->
   	<div class="container">
   	  <%= yield %>
+    <hr/>
 	  <%= link_to image_tag("rails.png", alt: "Rails Logo"), 'http://rubyonrails.org' %>
 	  <%= image_tag("mog.png", alt: "Moogle", size: "37x49", class: "mog") %>
-  	  <%= render 'layouts/footer' %>
+    <hr/>
+  	<%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
   	</div>
   </body>
 </html>

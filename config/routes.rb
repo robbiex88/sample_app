@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
-  get 'users/new'
+  
+
+  #get 'users/new'
 
   # defining root route creates named routes that allow user to refer to routes by name
   # rather than the raw URL.
@@ -15,7 +17,9 @@ Rails.application.routes.draw do
   get '/help', to: 'static_pages#help'
   get '/about', to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
-  get 'signup', to: 'users#new'
+  get '/signup', to: 'users#new'
+
+   
   # note this can be written like this, too:
   # get 'static_pages/home'
   # This new pattern routes a GET request for the URL /help to the help action in the Static Pages controller
@@ -26,5 +30,7 @@ Rails.application.routes.draw do
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :users
 
 end
