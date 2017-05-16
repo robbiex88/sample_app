@@ -5,34 +5,6 @@
 
 /* contrary to the rails tutorial, I know better than to stick /all/ styling into just one css file */
 
-
-/* this is for the sidebar on the show users page */
-aside {
-	section.user_info {
-		margin-top: 20px;
-	}
-	section {
-		padding: 10px 0;
-		margin-top: 20px;
-		&:first-child {
-			border: 0;
-			padding-top: 0;
-		}
-		span {
-			display: block;
-			margin-bottom: 3px;
-			line-height: 1;
-		}
-		h1 {
-			font-size: 1.4em;
-			text-align: left;
-			letter-spacing: -1px;
-			margin-bottom: 3px;
-			margin-top: 0px;
-		}
-	}
-}
-
 .gravatar {
 	float: left;
 	margin-right: 10px;
@@ -41,3 +13,4 @@ aside {
 .gravatar_edit {
 	margin-top: 15px;
 }
+

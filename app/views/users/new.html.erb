@@ -1,4 +1,23 @@
 <% provide(:title, "Sign Up") %>
-
 <h1>Sign Up</h1>
-<p>This is a stub page which will handle user signup.</p>
+<p>Please enter your information below to register for this site.</p>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<%= form_for @user do |field| %>
+			<%= render 'shared/error_messages' %>
+			<%= field.label :name %>
+			<%= field.text_field :name, class: 'form-control' %>
+
+			<%= field.label :email %>
+			<%= field.email_field :email, class: 'form-control' %>
+
+			<%= field.label :password %>
+			<%= field.password_field :password, class: 'form-control'%>
+
+			<%= field.label :password_confirmation %>
+			<%= field.password_field :password_confirmation, class: 'form-control' %>
+
+			<%= field.submit "Create my account", class: "btn btn-primary" %>
+		<% end %>
+	</div>
+</div>

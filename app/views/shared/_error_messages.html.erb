@@ -1,0 +1,12 @@
+<% if @user.errors %> <!-- book uses: @user.errors.any? , but this is redundant imo -->
+	<div id="error_explanation">
+		<div class="alert alert-danger"> <!-- bootstrap stuff -->
+			The form contains <%= pluralize(@user.errors.count, "error") %>:<!-- this is neat, pluralize is a rails method that pluralizes the second argument if the first argument is greater than one -->
+		</div>
+		<ul>
+		<% @user.errors.full_messages.each do |msg| %>
+			<li><%= "#{msg}" %> </li>
+		<% end %>
+		</ul>
+	</div>
+<% end %>
